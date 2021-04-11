@@ -24,6 +24,8 @@ Please enter your taxable income> 165000
 Your tax on 165000.0 is 36166.479999999996
 ```
 
+* Note: make sure that you have a test for non-numeric input
+
 #### 2. Volume of a cylinder
 
 Write a program to calculate the volume of a cylinder. The user enters in the diameter of the end of the circle, and the height in meters:

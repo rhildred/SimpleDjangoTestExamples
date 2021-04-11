@@ -25,8 +25,10 @@ def getFederalTax(nTaxable):
 
 
 if __name__ == "__main__":
-
-    #prompt for taxable income
-    nTaxable = int(input("Please enter your taxable income: "))
-    #output
-    print("tax on", nTaxable, "=", getFederalTax(nTaxable))
+    try:
+        #prompt for taxable income
+        nTaxable = int(input("Please enter your taxable income: "))
+        #output
+        print("tax on", nTaxable, "=", getFederalTax(nTaxable))
+    except:
+        print("Please enter a numeric value for taxable income.")

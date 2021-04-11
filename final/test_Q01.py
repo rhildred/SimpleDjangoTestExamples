@@ -11,4 +11,9 @@ class Q2Tests(TestCase):
         self.assertEqual(getFederalTax(100000), 18528.62, "calculate federal tax on $100,000")
         self.assertEqual(getFederalTax(150000), 31816.48, "calculate federal tax on $150,000")
         self.assertEqual(getFederalTax(220000), 52917.0, "calculate federal tax on $220,000")
+        try:
+            getFederalTax("asdf")
+            self.assertFalse(True, "shouldn't get here")
+        except:
+            self.assertFalse(False, "it should throw an exception and land here")
 
