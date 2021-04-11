@@ -9,6 +9,9 @@ if __name__ == "__main__":
     aDays = []
     nDays = 7
 
-    for n in range(1, nDays + 1):
-        aDays.append(int(input("Enter your calories for day " + str(n) +": ")))
-    print("Your average calories for", nDays, "days was", average_cals(aDays))
+    try:
+        for n in range(1, nDays + 1):
+            aDays.append(int(input("Enter your calories for day " + str(n) +": ")))
+        print("Your average calories for", nDays, "days was", average_cals(aDays))
+    except:
+        print("Please enter numeric values for all days.")

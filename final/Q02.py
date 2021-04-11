@@ -2,10 +2,7 @@ import math
 #calculate volume
 
 def getVolume(nRadius, nHeight):
-    try:
-        return round(math.pi * nRadius **2 * nHeight, 2)
-    except:
-        pass
+    return round(math.pi * nRadius **2 * nHeight, 2)
 
 if __name__ == "__main__":
     # input
@@ -15,5 +12,8 @@ if __name__ == "__main__":
     nHeight = int(input("height (meters) >"))
 
     #output
-    print("the volume is", getVolume(nRadius, nHeight), "cubic meters")
+    try:
+        print("the volume is", getVolume(nRadius, nHeight), "cubic meters")
+    except:
+        print("please enter numeric values for nRadius and nHeight")
     

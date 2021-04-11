@@ -34,7 +34,7 @@ volume = pi * r ** 2 * height
     Output the radius and height as they were input
     Output the volume of the cylinder
 
-*Note: You will need to test for non-numeric input
+*Note: You will need to test for non-numeric input as a test to fail case
 
 ##### Sample Output
 
@@ -84,6 +84,8 @@ Enter Price >$1.99
 4 - Delete
 5 - List
 ```
+
+* Note: You will need to test the delete on a case where the key to be deleted doesn't exist.
 
 #### 5. Cash Register
 
@@ -146,6 +148,8 @@ Within a healthy, balanced diet, a man needs around 10,500kJ (2,500kcal) a day t
 
 Write a program that prompts the user to input the number of calories for 7 days and then prints the weekly average.
 
+* Note: You will need a test case for a non-numeric value.
+
 ##### Sample Output
 
 ```
@@ -186,6 +190,8 @@ Pig Latin: IAY EPTSLAY OSTMAY OFAY ETHAY IGHTNAY
 #### 9. ISO 3166 Country codes
 
 Write a program that uses a dictionary to map 10 country names to their ISO 3166 2 letter code. Use an exception to make sure that if the country name isn't in the dictionary it returns a helpful error message.
+
+* Note: You also need to have a test case for that exception
 
 #### 10. Tossing a block
 
