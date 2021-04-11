@@ -4,7 +4,7 @@
 |Name:|||
 |Student Number:|||
 
-Please solve 8 of the following 10 problems with complete tests. Each solution is worth 10 marks. 
+Please solve 7 of the following 10 problems with complete tests. Each solution is worth 10 marks. 
 Create a django project with 1 app in it called `final`. Save all of your .py files to the `final` folder as in [the example final](https://github.com/rhildred/SimpleDjangoTestExamples). You can create a suitable django project by running:
 
 1. `python3 -m django startproject final_exam`
