@@ -2,7 +2,10 @@ import math
 #calculate volume
 
 def getVolume(nRadius, nHeight):
-    return round(math.pi * nRadius **2 * nHeight, 2)
+    try:
+        return round(math.pi * nRadius **2 * nHeight, 2)
+    except:
+        pass
 
 if __name__ == "__main__":
     # input
