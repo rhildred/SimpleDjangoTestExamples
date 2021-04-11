@@ -15,3 +15,10 @@ def num_Consonants(sInput):
         if ch not in sVowels and ch not in " .,!>?":
             nConsonants += 1
     return nConsonants
+
+if __name__ == "__main__":
+    sUserInput = input("enter a string >")
+
+    print("the string contains", num_Vowels(sUserInput), "Vowels")
+
+    print("the string contains", num_Consonants(sUserInput), "Consonants")

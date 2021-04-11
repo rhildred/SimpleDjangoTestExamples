@@ -22,3 +22,11 @@ def getFederalTax(nTaxable):
         nMarginal = .33
         nPreviousTax = 46317
     return round((nTaxable - nPrevious) * nMarginal + nPreviousTax, 2)
+
+
+if __name__ == "__main__":
+
+    #prompt for taxable income
+    nTaxable = int(input("Please enter your taxable income: "))
+    #output
+    print("tax on", nTaxable, "=", getFederalTax(nTaxable))

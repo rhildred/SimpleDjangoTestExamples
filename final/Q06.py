@@ -3,3 +3,12 @@ def average_cals(aInput):
     for nCals in aInput:
         nTotal += nCals
     return round(nTotal/len(aInput), 2)
+
+
+if __name__ == "__main__":
+    aDays = []
+    nDays = 7
+
+    for n in range(1, nDays + 1):
+        aDays.append(int(input("Enter your calories for day " + str(n) +": ")))
+    print("Your average calories for", nDays, "days was", average_cals(aDays))

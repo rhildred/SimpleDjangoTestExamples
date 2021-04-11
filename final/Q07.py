@@ -17,3 +17,13 @@ def num_Consonants(sInput):
 def num_Words(sInput):
     aWords = sInput.split(" ")
     return len(aWords)
+
+if __name__ == "__main__":
+
+    sUserInput = input("enter a string >")
+
+    print("the string contains", num_Vowels(sUserInput), "Vowels")
+
+    print("the string contains", num_Consonants(sUserInput), "Consonants")
+
+    print("the string contains", num_Words(sUserInput), "Words")

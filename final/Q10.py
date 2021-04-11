@@ -6,3 +6,7 @@ class Block:
         nSide = random.randint(0,5)
         return aSides[nSide]
 
+if __name__ == "__main__":
+    oBlock = Block()
+
+    print(oBlock.toss())
