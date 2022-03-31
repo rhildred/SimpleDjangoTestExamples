@@ -2,15 +2,12 @@ from django.test import TestCase
 
 # Create your tests here.
 
-from final.Q05 import CashRegister, Item
+from final.Q05 import num_Consonants, num_Vowels, num_Words
 
-class Q5Tests(TestCase):
-    def test_cash(self):
+class Q7Tests(TestCase):
+    def test_counts(self):
+        sInput = "How long since the Train been gone?"
 
-        cash = CashRegister()
-
-        cash.purchase_item(Item("Designer Jeans", "34.95"))
-
-        self.assertEqual(cash.show_items(), "Items in Cart\nDesigner Jeans,34.95" )
-
-        self.assertEqual(cash.get_total(), 34.95, "total in cart")
+        self.assertEqual(num_Words(sInput), 7)
+        self.assertEqual(num_Consonants(sInput), 17)
+        self.assertEqual(num_Vowels(sInput), 11)

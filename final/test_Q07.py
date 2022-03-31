@@ -2,12 +2,15 @@ from django.test import TestCase
 
 # Create your tests here.
 
-from final.Q07 import num_Consonants, num_Vowels, num_Words
+from final.Q07 import getCountryCode
 
-class Q7Tests(TestCase):
-    def test_counts(self):
-        sInput = "How long since the Train been gone?"
-
-        self.assertEqual(num_Words(sInput), 7)
-        self.assertEqual(num_Consonants(sInput), 17)
-        self.assertEqual(num_Vowels(sInput), 11)
+class Q09Tests(TestCase):
+    def test_Countries(self):
+        sCountry = getCountryCode("Argentina")
+        self.assertEqual(sCountry, 'AR')
+        sCountry = getCountryCode("Brazil")
+        self.assertEqual(sCountry, 'BR')
+        sCountry = getCountryCode("Canada")
+        self.assertEqual(sCountry, 'CA')
+        sCountry = getCountryCode("Denmark")
+        self.assertEqual(sCountry, 'DK')

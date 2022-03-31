@@ -1,17 +1,21 @@
-def average_marks(aInput):
-    nTotal = 0
-    for nCals in aInput:
-        nTotal += nCals
-    return round(nTotal/len(aInput), 2)
+def translate_to_pig_latin(sInput):
+    aInput = sInput.split(" ")
 
+    sOutput = ""
+
+    for sWord in aInput:
+        nFirst = 0
+        for ch in sWord:
+            if ch in "aeiou":
+                break
+            else:
+                nFirst += 1
+        if sOutput != "":
+            sOutput += " "
+        sOutput += sWord[nFirst:len(sWord)] + sWord[:nFirst] + "ay"
+    return sOutput
 
 if __name__ == "__main__":
-    aDays = []
-    nLabs = 7
-
-    try:
-        for n in range(1, nLabs + 1):
-            aDays.append(int(input("Enter your marks for lab " + str(n) +": ")))
-        print("Your average mark for", nLabs, "labs was", average_marks(aDays))
-    except:
-        print("Please enter numeric values for all days.")
+    sInput = input("Enter an English phrase to translate: ")
+    sOutput = translate_to_pig_latin(sInput)
+    print(sOutput)

@@ -1,29 +1,14 @@
-sVowels = "aeiou"
+dictCountry = {"Argentina":"AR","Brazil":"BR","Canada":"CA", "Denmark":"DK", "Egypt":"EG", "France":"FR", "Germany":"DE", "Hungary":"HU", "India":"IN", "Japan":"JP"}
 
-def num_Vowels(sInput):
-    nVowels = 0
-    for ch in sInput:
-        if ch in sVowels:
-            nVowels += 1
-    return nVowels
-
-def num_Consonants(sInput):
-    nConsonants = 0
-    for ch in sInput:
-        if ch not in sVowels and ch not in " .,!>?":
-            nConsonants += 1
-    return nConsonants
-
-def num_Words(sInput):
-    aWords = sInput.split(" ")
-    return len(aWords)
+def getCountryCode(sCountry):
+    global dictCountry
+    return dictCountry[sCountry]
 
 if __name__ == "__main__":
-
-    sUserInput = input("enter a string >")
-
-    print("the string contains", num_Vowels(sUserInput), "Vowels")
-
-    print("the string contains", num_Consonants(sUserInput), "Consonants")
-
-    print("the string contains", num_Words(sUserInput), "Words")
+    try:
+        sCountryName = input("Enter the name of a country: ")
+        sCountryCode = getCountryCode(sCountryName)
+        print("The code for", sCountryName, "is", sCountryCode)
+    except:
+        # there is a lot going on here!
+        print("Please enter a country from", list(dictCountry.keys()))
