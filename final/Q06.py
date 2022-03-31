@@ -1,4 +1,4 @@
-def average_cals(aInput):
+def average_marks(aInput):
     nTotal = 0
     for nCals in aInput:
         nTotal += nCals
@@ -7,11 +7,11 @@ def average_cals(aInput):
 
 if __name__ == "__main__":
     aDays = []
-    nDays = 7
+    nLabs = 7
 
     try:
-        for n in range(1, nDays + 1):
-            aDays.append(int(input("Enter your calories for day " + str(n) +": ")))
-        print("Your average calories for", nDays, "days was", average_cals(aDays))
+        for n in range(1, nLabs + 1):
+            aDays.append(int(input("Enter your marks for lab " + str(n) +": ")))
+        print("Your average mark for", nLabs, "labs was", average_marks(aDays))
     except:
         print("Please enter numeric values for all days.")
